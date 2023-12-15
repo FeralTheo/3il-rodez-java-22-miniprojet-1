@@ -7,7 +7,19 @@ import java.util.Random;
  * Elle utilise la classe Random de Java pour générer des valeurs aléatoires.
  */
 public class BruitAleatoire extends Bruit2D {
+	
+    public BruitAleatoire(long graine, double resolution) {
+    	super( graine, resolution);
+    }
 
-    public BruitAleatoire(long graine, double resolution);
+	@Override
+	public double bruit2D(double x, double y) {
+		Random aleatoire = new Random();
+    	aleatoire.setSeed(getGraine());
+    	return aleatoire.nextDouble(0, getResolution());
+		
+	}
+    
+    
     
 }
