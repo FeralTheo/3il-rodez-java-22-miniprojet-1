@@ -70,11 +70,7 @@ public class Utils {
      * @author philibert roquart, fainéant
      */
     public static double min(int width, int height) {
-    	if(width < height) {
-    		return width;
-    	}else {
-    		return height;
-    	}
+    	return width < height ? width : height;
     }
 
     /**
