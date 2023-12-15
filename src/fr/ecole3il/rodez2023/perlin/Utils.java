@@ -6,7 +6,6 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.Random;
-
 import javax.imageio.ImageIO;
 
 /**
@@ -48,11 +47,16 @@ public class Utils {
      * @author philibert roquart, fainéant
      */
     public static int[] melanger(int[] tab, long seed) {
-        // Mélanger le tableau de permutation en utilisant 
-    	// ...
-    	// Bon, je le ferai plus tard, je vais réviser l'espagnol
-    	// Je mets ça, ça marchera bien en attendant
-    	// tant pis
+    	Random random = new Random(seed);
+    	
+    	for (int i = tab.length - 1; i > 0; i--) {
+    		int index = random.nextInt(i + 1);
+    		
+    		// Echange des élements aux positions i et index  
+    		int temp = tab[i];
+    		tab[i] = tab[index];
+    		tab[index] = temp;
+    	}
         return tab;
     }
 
