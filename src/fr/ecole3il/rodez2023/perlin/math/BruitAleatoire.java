@@ -16,7 +16,7 @@ public class BruitAleatoire extends Bruit2D {
 	public double bruit2D(double x, double y) {
 		Random aleatoire = new Random();
     	aleatoire.setSeed(getGraine());
-    	return aleatoire.nextDouble(0, getResolution());
+    	return aleatoire.nextDouble();
 		
 	}
     
