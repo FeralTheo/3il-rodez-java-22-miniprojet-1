@@ -10,7 +10,6 @@ import java.util.Random;
  * La graine est utilisée pour initialiser le générateur de nombres aléatoires.
  * La résolution est laissée à 1.
  * 
- * @author Théo Feral
  */
 public class GenerateurAleatoire extends GenerateurCarte {
     private Random random;
